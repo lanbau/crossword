@@ -36,4 +36,14 @@ test('return 2x2 solution', () => {
     )
 })
 
-
+test('return 2x2 solution reverse row', () => {
+    const option = 'reverse row'
+    expect(
+        crossword(words, grid2x2, option)[2]
+    ).toEqual(
+        [
+            ['o', 't'], 
+            ['r', 'o']
+        ]
+    )
+})
