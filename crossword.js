@@ -1,3 +1,4 @@
+// o(n) time complexity - 1 to 1 input output da same
 const crossword = (words, option) => {
     if (option == null || option == undefined) {
         let result = []
