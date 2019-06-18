@@ -23,6 +23,25 @@ const crossword = (words, grid, option) => {
 
         return [words, grid, result]
     }
+
+    else if (option == 'reverse first row') {
+        let result = []
+
+        words.forEach((word, index) => {
+            if (index == 0) {
+                result.push(
+                    word.split('').reverse()
+                )
+            } else {
+                result.push(
+                    word.split('')
+                )
+            }
+            
+        })
+
+        return [words, grid, result]
+    }
     
 }
 module.exports = crossword
