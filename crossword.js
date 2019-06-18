@@ -1,4 +1,4 @@
-const crossword = (words, grid, option) => {
+const crossword = (words, option) => {
     if (option == null || option == undefined) {
         let result = []
         // loop input
@@ -10,7 +10,7 @@ const crossword = (words, grid, option) => {
             )
         })
 
-        return [words, grid, result]
+        return [words, result]
     } 
     else if (option == 'reverse row') {
         let result = []
@@ -21,7 +21,7 @@ const crossword = (words, grid, option) => {
             )
         })
 
-        return [words, grid, result]
+        return [words, result]
     }
 
     else if (option == 'reverse first row') {
@@ -40,7 +40,7 @@ const crossword = (words, grid, option) => {
             
         })
 
-        return [words, grid, result]
+        return [words, result]
     }
     
 }

@@ -1,33 +1,15 @@
 const crossword = require('../crossword') 
 const words = ['to', 'or']
-const grid2x2 = [
-    ['', ''],
-    ['', '']
-]
-const result2x2 = [
-    ['t', 'o'],
-    ['o', 'r']
-]
+
 test('return array of 2 words', () => {
     expect(
-        crossword(words, grid2x2)[0]
+        crossword(words)[0]
     ).toEqual(['to', 'or'])
-})
-
-test('return array of 2 arrays', () => {
-    expect(
-        crossword(words, grid2x2)[1]
-    ).toEqual(
-        [
-            ['', ''], 
-            ['', '']
-        ]
-    )
 })
 
 test('return 2x2 solution', () => {
     expect(
-        crossword(words, grid2x2)[2]
+        crossword(words)[1]
     ).toEqual(
         [
             ['t', 'o'], 
@@ -39,7 +21,7 @@ test('return 2x2 solution', () => {
 test('return 2x2 solution reverse both row', () => {
     const option = 'reverse row'
     expect(
-        crossword(words, grid2x2, option)[2]
+        crossword(words, option)[1]
     ).toEqual(
         [
             ['o', 't'], 
@@ -52,7 +34,7 @@ test('return 2x2 solution reverse both row', () => {
 test('return 2x2 solution reverse first row', () => {
     const option = 'reverse first row'
     expect(
-        crossword(words, grid2x2, option)[2]
+        crossword(words, option)[1]
     ).toEqual(
         [
             ['o', 't'], 
